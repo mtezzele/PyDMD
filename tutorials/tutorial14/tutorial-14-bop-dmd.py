@@ -116,7 +116,7 @@ plt.show()
 
 
 optdmd = BOPDMD(svd_rank=1, num_trials=0)
-bopdmd = BOPDMD(svd_rank=1, num_trials=100)
+bopdmd = BOPDMD(svd_rank=1, num_trials=100, varpro_opts_dict={"tol": 0.0115})
 dmd = DMD(svd_rank=1, tlsq_rank=2, exact=True, opt=True)
 
 optdmd.fit(snapshots_1d, time)
